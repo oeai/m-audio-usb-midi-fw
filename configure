@@ -1737,7 +1737,7 @@ fi
 
 echo "$as_me:$LINENO: checking for udev version" >&5
 echo $ECHO_N "checking for udev version... $ECHO_C" >&6
-udev_ver=`udevinfo -V | awk '{ print $3 }'`
+udev_ver=`/sbin/udevadm info --version | awk '{ print $1 }'`
 if test -n "$udev_ver"; then
   echo "$as_me:$LINENO: result: $udev_ver" >&5
 echo "${ECHO_T}$udev_ver" >&6
