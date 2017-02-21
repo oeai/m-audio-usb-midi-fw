@@ -23,15 +23,15 @@ if test ! -x "$FXLOAD"; then
 fi
 
 AC_MSG_CHECKING([for udev version])
-udev_ver=`udevinfo -V | awk '{ print $3 }'`
+udev_ver=`/sbin/udevadm info --version | awk '{ print $1 }'`
 if test -n "$udev_ver"; then
   AC_MSG_RESULT([$udev_ver])
 else
   AC_MSG_RESULT([none])
   udev_ver="0"
 fi
-if test "$udev_ver" -lt 057; then
-  AC_MSG_ERROR([udev version 057 or later is required])
+if test "$udev_ver" -lt 128; then
+  AC_MSG_ERROR([udev version 128 or later is required])
 fi
 
 AC_ARG_WITH([udev],
