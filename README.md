@@ -28,16 +28,16 @@ Supported devices:
 (You don't need a firmware download for the USB Audio Quattro, Duo, or
 MidiSport 2x4.)
 
-The project page is <http://usb-midi-fw.sourceforge.net/>.
+The project page is <http://usb-midi-fw.sf.net/>.
 
 
 Prerequisites
 -------------
 
-- Linux kernel 2.6.x
-- udev version 057 or later
+- Linux kernel 3.x or later
+- udev version 128 or later
 - fxload (release dated 2002_04_11 or later)
-  (you can get fxload from <http://linux-hotplug.sourceforge.net/>)
+  (you can get fxload from <http://linux-hotplug.sf.net/>)
 
 
 Installing
