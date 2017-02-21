@@ -1,6 +1,6 @@
 # Process this file with autoconf to produce a configure script
 AC_PREREQ(2.0)
-AC_INIT(midisport-firmware, 1.2, [usb-midi-fw-user@lists.sourceforge.net])
+AC_INIT(midisport-firmware, 1.3, [usb-midi-fw-user@lists.sourceforge.net])
 AM_INIT_AUTOMAKE($PACKAGE_NAME, $PACKAGE_VERSION)
 AC_REVISION($Revision$)
 AC_CONFIG_SRCDIR(MidiSportLoader.ihx)
