@@ -1,0 +1,14 @@
+Version 1.2
+  * configure.ac:
+    check for minimum required udev version and fxload availability
+
+Version 1.1
+  * 42-midisport-firmware.rules.in:
+    for compatibility with older udev versions, removed GOTO optimization
+
+Version 1.0
+  added firmware files
+  added udev support and removed hotplug support
+
+older versions
+  (changes not recorded)
