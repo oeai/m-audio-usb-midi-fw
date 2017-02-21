@@ -1,18 +1,15 @@
-# midisport-firmware.rules - udev rules for loading firmware into MidiSport devices
-
-# DEVPATH=="/*.0" selects interface 0 only
-# (some udev versions don't work with SYSFS{bInterfaceNumber})
+# midisport-firmware.rules  
+# udev rules for loading firmware into MidiSport devices
+## tested with Radium 61 on linux kernel 4.1.3 \ udev 219 
 
 # MidiSport 2x2
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1001/*", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport2x2.ihx"
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1001", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport2x2.ihx -D $env{DEVNAME}"
 # MidiSport 1x1
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1010/*", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport1x1.ihx"
-# KeyStation
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1014/*", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSportKS.ihx"
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1010", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport1x1.ihx -D $env{DEVNAME}"
+# KeyStation Radium\Oxygen
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1014", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSportKS.ihx -D $env{DEVNAME}"
 # MidiSport 4x4
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1020/*", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport4x4.ihx"
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1020", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport4x4.ihx -D $env{DEVNAME}"
 # MidiSport 8x8
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1031/110", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.10.ihx"
-ACTION=="add", SUBSYSTEM=="usb", DEVPATH=="/*.0", ENV{PRODUCT}=="763/1031/121", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.21.ihx"
-
-# vim: ft=conf
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0110",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.10.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0121",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.2.ihx -D $env{DEVNAME}"
