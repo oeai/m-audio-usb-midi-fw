@@ -66,7 +66,7 @@ is connected to the computer.
 Contact
 -------
 
-For help, discussion or feedback, send a mail to the mailing list at
-<usb-midi-fw-user@lists.sourceforge.net>.
+For help, discussion or feedback, post it here
+https://github.com/oeai/m-audio-usb-midi-fw/issues.
 
 written by Clemens Ladisch <clemens@ladisch.de>
