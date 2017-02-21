@@ -2,8 +2,8 @@
 # You might want to fix the remaining bugs before using it.  ;-)
 
 Name: midisport-firmware
-Version: 1.2
-Release: 1
+Version: 1.3
+Release: 2
 Summary: firmware for MidiSport devices
 License: proprietary
 Group: System Environment/Daemons
@@ -51,5 +51,6 @@ make DESTDIR=%{buildroot} install
 rm -rf %{buildroot}
 
 %changelog
+
 * Sat Feb 11 2006 Clemens Ladisch <clemens@ladisch.de>
   created
