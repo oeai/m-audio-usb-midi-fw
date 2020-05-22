@@ -12,4 +12,4 @@ ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}
 ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1020", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport4x4.ihx -D $env{DEVNAME}"
 # MidiSport 8x8
 ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0110",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.10.ihx -D $env{DEVNAME}"
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0121",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.2.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0121",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.21.ihx -D $env{DEVNAME}"
