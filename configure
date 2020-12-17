@@ -1747,8 +1747,8 @@ echo "${ECHO_T}none" >&6
   udev_ver="0"
 fi
 if test "$udev_ver" -lt 128; then
-  { { echo "$as_me:$LINENO: error: udev version 128 or later is required" >&5
-echo "$as_me: error: udev version 128 or later is required" >&2;}
+  { { echo "$as_me:$LINENO: error: udev version 148 or later is required " >&5
+echo "$as_me: error: udev version 148 or later is required, pls check the location of /usr/bin/udevadm and change it in configure file, if differs" >&2;}
    { (exit 1); exit 1; }; }
 fi
 
